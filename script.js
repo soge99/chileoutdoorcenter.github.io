@@ -1,7 +1,7 @@
 // Efecto de desplazamiento suave
-document.querySelectorAll('nav ul li a').forEach(anchor => {
+document.querySelectorAll('nav ul li a:not(.btn-whatsapp)').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
-        e.preventDefault();
+        e.preventDefault(); // Prevenir el comportamiento predeterminado solo para enlaces que no son WhatsApp
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });

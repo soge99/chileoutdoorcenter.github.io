@@ -201,8 +201,22 @@ nav ul li a:hover {
     padding: 100px 20px;
     text-align: center;
     color: #fff;
+    margin-bottom: 10px;
 }
-
+.quincho {
+    background: url('images/quinchos.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.paintball {
+    background: url('images/paintball.jpg') no-repeat center center/cover;
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 10px;
+}
 .rafting-content {
     max-width: 800px;
     margin: 0 auto;
@@ -212,8 +226,24 @@ nav ul li a:hover {
     font-size: 3em;
     margin-bottom: 20px;
 }
+.paintball h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+.quincho h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
 
 .rafting p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+.quincho p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+.paintball p {
     font-size: 1.2em;
     margin-bottom: 40px;
 }
@@ -286,4 +316,94 @@ footer {
 
 .social-icons a:hover {
     color: #1abc9c;
+}
+
+/* Estilos para la página de instalación detallada */
+.instalacion-detalle {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.instalacion-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.imagen-texto {
+    display: flex;
+    align-items: center;
+    gap: 40px; /* Espacio entre la imagen y el texto */
+}
+
+.imagen-texto img {
+    width: 40%; /* Reducimos el ancho de la imagen */
+    border-radius: 10px;
+    max-height: 550px; /* Limitamos la altura máxima */
+    object-fit: cover; /* Asegura que la imagen mantenga su proporción */
+}
+
+.imagen-texto .texto {
+    width: 60%; /* El texto ocupa más espacio */
+    text-align: left;
+}
+
+.imagen-texto h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.imagen-texto p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.imagen-texto ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.imagen-texto ul li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.imagen-texto ul li::before {
+    content: "•";
+    color: #1abc9c;
+    font-size: 1.5em;
+    position: absolute;
+    left: 0;
+    top: -5px;
+}
+
+.imagen-texto .btn-primary {
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.imagen-texto .btn-primary:hover {
+    background-color: #16a085;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+    .imagen-texto {
+        flex-direction: column;
+    }
+
+    .imagen-texto img,
+    .imagen-texto .texto {
+        width: 100%;
+    }
+
+    .imagen-texto img {
+        max-height: 300px; /* Ajustamos la altura para móviles */
+    }
 }
