@@ -11,16 +11,22 @@
 <body>
     <header>
         <div class="logo">
-            <img src="images/logobueno.png" alt="Logo Turismo Aventura">
+            <a href="index.html">
+                <img src="images/logobueno.png" alt="Logo Chile Outdoor Center">
+            </a>
         </div>
+        <!-- Botón de menú de hamburguesa -->
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <i class="fas fa-bars"></i>
+        </button>
+        <!-- Menú de navegación -->
         <nav>
             <ul>
                 <li><a href="#instalaciones">Instalaciones</a></li>
                 <li><a href="#precios">Precios</a></li>
                 <li><a href="#actividades">Actividades con reserva</a></li>
                 <li><a href="#ubicacion">Ubicación</a></li>
-                <!--li><a href="https://wa.me/56950757854" class="btn-primary" target="_blank">Contáctanos</a></li> -->
-
+                <li><a href="https://wa.me/56932125884" class="btn-primary btn-contacto" target="_blank">Contáctanos</a></li>
             </ul>
         </nav>
     </header>
@@ -29,44 +35,26 @@
         <div class="hero-content">
             <h1>Bienvenidos a Chile Outdoor Center</h1>
             <p>Descubre un mundo de emociones en medio de la naturaleza.</p>
-            <a href="https://wa.me/56950757854" class="btn-primary" target="_blank">Reserva Ahora</a>
         </div>
     </section>
 
     <section id="instalaciones" class="instalaciones">
-        
         <h2>Nuestras Instalaciones</h2>
         <div class="grid">
-            <div class="item">
-                <img src="images/piscina.jpg" alt="Piscina para nado">
-                <div class="item-text">
-                    <h3>Piscina para nado</h3>
-                    <p>Refrescate y olvidate del calor en nuestra Piscina</p>
-                </div>
-            </div>
-            <a href="piscina-kayac.html" class="item">
+            <a href="piscina-kayak.html" class="item">
                 <img src="images/balsas.jpg" alt="Piscina de kayac">
                 <div class="item-text">
-                    <h3>Piscina de kayac</h3>
+                    <h3>Piscina de kayak</h3>
                     <p>Incluye kayac, casco y chaleco salvavidas.</p>
                 </div>
             </a>
-            <div class="item">
-                <img src="images/picnic1.jpg" alt="Zona de picnic">
+            <a href="camping-picnic.html" class="item">
+                <img src="images/picnic.jpg" alt="Zona de camping y picnic">
                 <div class="item-text">
-                    <h3>Zona de picnic</h3>
-                    <p>Relájate y disfruta de un día al aire libre.</p>
+                    <h3>Zona de picnic y camping</h3>
+                    <p>Relájate y disfruta de experiencias al aire libre.</p>
                 </div>
-            </div>
-            <div class="item">
-                <img src="images/sombras1.jpg" alt="Sombras y asientos">
-                <div class="item-text">
-                    <h3>zona de camping</h3>
-                    <p>Disfruta de la naturaleza bajo las estrellas</p>
-                </div>
-            </div>
-            
-            </div>
+            </a>
         </div>
     </section>
 
@@ -90,63 +78,68 @@
             </div>
         </div>
     </section>
-
-    <section id= "actividades">
-        <div id="rafting" class="rafting">
-            <div class="rafting-content">
-                <h2>Rafting</h2>
-                <p>Experimenta la emoción y la adrenalina del rafting por solo $30.000 pesos.</p>
-                <a class="btn-primary" target="_blank">Reservar Ahora</a>
-            </div>
-        </div>
-        <div id="quincho" class="quincho">
-            <div class="rafting-content">
-                <h2>Quincho</h2>
-                <p>Celebra tu cumpleaños campestre con nosotros</p>
-                <a class="btn-primary" target="_blank">Reservar Ahora</a>
-            </div>
-        </div>
-    
-        <div id="paintball" class="paintball">
-            <div class="rafting-content">
-                <h2>Paintball</h2>
-                <p>¡Corre, apunta y dispara! Vive la emoción del paintball</p>
-                <a  class="btn-primary" target="_blank">Reservar Ahora</a>
+<!-- Sección de Actividades -->
+<section id="actividades" class="actividades">
+    <h2>Nuestras Actividades</h2> <!-- Título agregado -->
+    <section class="rafting">
+        <div class="rafting-content">
+            <h2>Rafting</h2>
+            <p>Experimenta la emoción y la adrenalina del rafting.</p>
+            <div class="botones-actividad">
+                <a href="https://wa.me/56932125884" class="btn-primary">Reservar Ahora</a>
+                <a href="/rafting.html" class="btn-secondary">Más Información</a>
             </div>
         </div>
     </section>
 
-    
-
-    <!-- Sección de Ubicación -->
-    <section id="ubicacion" class="ubicacion">
-        <h2>Ubicación</h2>
-        <div class="mapa-container">
-            <h2>AQUI VA EL MAPA DE GOOGLE MAPS</h2>
-            <!--<img src="images/mapa.png" alt="Como llegar">-->
-            <!--
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.3310693202657!2d-70.33656882435992!3d-33.700381210355225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967cd155dada4ab9%3A0x843fb8ac65f8943!2sCam.%20Al%20Volc%C3%A1n%2027967%2C%209460394%20El%20Melocot%C3%B3n%2C%20San%20Jos%C3%A9%20de%20Maipo%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1738030048766!5m2!1ses!2scl"
-                width="100%"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy">
-            </iframe>
-            -->
+    <section class="quincho">
+        <div class="quincho-content">
+            <h2>Quincho</h2>
+            <p>Celebra tu cumpleaños campestre con nosotros.</p>
+            <div class="botones-actividad">
+                <a href="https://wa.me/56932125884" class="btn-primary">Reservar Ahora</a>
+                <a href="/quincho.html" class="btn-secondary">Más Información</a>
+            </div>
         </div>
     </section>
+
+    <section class="paintball">
+        <div class="paintball-content">
+            <h2>Paintball</h2>
+            <p>¡Corre, apunta y dispara! Vive la emoción del paintball.</p>
+            <div class="botones-actividad">
+                <a href="https://wa.me/56932125884" class="btn-primary">Reservar Ahora</a>
+                <a href="paintball.html" class="btn-secondary">Más Información</a>
+            </div>
+        </div>
+    </section>
+</section>
+
+<!-- Sección de Ubicación -->
+<section id="ubicacion" class="ubicacion">
+    <h2>Ubicación</h2>
+    <h3>Dirección camino al volcan 27.967, Melocotón, San José de Maipo</h3>
+    <div class="mapa-container">
+        
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.3310693202657!2d-70.33656882435992!3d-33.700381210355225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967cd155dada4ab9%3A0x843fb8ac65f8943!2sCam.%20Al%20Volc%C3%A1n%2027967%2C%209460394%20El%20Melocot%C3%B3n%2C%20San%20Jos%C3%A9%20de%20Maipo%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1ses!2scl!4v1738030048766!5m2!1ses!2scl"
+            width="100%"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </div>
+</section>
 
     <!-- Botón flotante de WhatsApp -->
-     <a class="whatsapp-float" target="_blank">
-     <a class="whatsapp-float" target="_blank">
-    <!--a href="https://wa.me/56950757854" class="whatsapp-float" target="_blank"></a>-->
+    <a href="https://wa.me/56932125884" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <footer>
         <div class="footer-content">
-            <p>&copy; 2025 Maria Ignacia Saavedra. Chile Outdoor Center .</p>
+            <p>&copy; 2025 Chile Outdoor Center. Todos los derechos reservados.</p>
             <div class="social-icons">
                 <a href="https://www.tiktok.com/@chile_outdoor_center?_t=ZN-8tVK0CA4q5G&_r=1"><i class="fab fa-tiktok"></i></a>
                 <a href="https://www.instagram.com/chile_outdoor_center"><i class="fab fa-instagram"></i></a>

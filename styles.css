@@ -1,9 +1,17 @@
+/* Variables CSS */
+:root {
+    --color-primary: #1abc9c;
+    --color-secondary: #25d366;
+    --color-bg: #f9f9f9;
+    --color-text: #333;
+}
+
 /* Estilos generales */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    color: var(--color-text);
     line-height: 1.6;
 }
 
@@ -20,7 +28,7 @@ a {
 header {
     background-color: #2c3e50;
     color: #fff;
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,6 +41,7 @@ header .logo img {
     height: 50px;
 }
 
+/* Menú de navegación */
 nav ul {
     list-style: none;
     margin: 0;
@@ -48,26 +57,39 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #1abc9c;
+    color: var(--color-primary);
 }
 
-.btn-whatsapp {
-    background-color: #25d366;
+/* Botón de menú de hamburguesa (oculto en desktop) */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Botón "Contáctanos" */
+.btn-contacto {
+    background-color: var(--color-primary);
+    color: #fff;
     padding: 10px 20px;
     border-radius: 5px;
-    color: #fff;
     font-weight: 600;
     transition: background-color 0.3s;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+    text-align: center;
 }
 
-.btn-whatsapp:hover {
-    background-color: #128c7e;
+.btn-contacto:hover {
+    background-color: #16a085;
 }
 
 /* Hero Section */
 .hero {
-    background: url('images/hero.jpg') no-repeat center center/cover;
-    height: 100vh;
+    background: url('images/hero2.jpg') no-repeat center center/cover;
+    height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -89,23 +111,41 @@ nav ul li a:hover {
     margin-bottom: 40px;
 }
 
+/* Botones principales */
 .btn-primary {
-    background-color: #1abc9c;
+    background-color: var(--color-primary);
     color: #fff;
-    padding: 15px 30px;
+    padding: 10px 20px;
     border-radius: 5px;
     font-weight: 600;
     transition: background-color 0.3s;
+    text-align: center;
 }
 
 .btn-primary:hover {
     background-color: #16a085;
 }
 
+/* Botón secundario (Más Información) */
+.btn-secondary {
+    background-color: #34495e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    text-align: center;
+    margin-right: 10px; /* Espacio entre los botones */
+}
+
+.btn-secondary:hover {
+    background-color: #2c3e50;
+}
+
 /* Instalaciones Section */
 .instalaciones {
     padding: 80px 20px;
-    background-color: #f9f9f9;
+    background-color: var(--color-bg);
     text-align: center;
 }
 
@@ -125,16 +165,25 @@ nav ul li a:hover {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .item img {
     width: 100%;
+    height: 400px;
+    object-fit: cover;
     display: block;
     transition: transform 0.3s;
 }
 
 .item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .item-text {
@@ -142,20 +191,23 @@ nav ul li a:hover {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.8); /* Fondo más oscuro para mayor contraste */
     color: #fff;
     padding: 20px;
     text-align: center;
+    border-radius: 0 0 10px 10px; /* Bordes redondeados solo en la parte inferior */
 }
 
 .item-text h3 {
     font-size: 1.5em;
     margin-bottom: 10px;
+    color: #fff; /* Texto blanco para mayor contraste */
 }
 
 .item-text p {
     font-size: 1em;
     margin: 0;
+    color: #fff; /* Texto blanco para mayor contraste */
 }
 
 /* Precios Section */
@@ -177,7 +229,7 @@ nav ul li a:hover {
 }
 
 .precio-item {
-    background-color: #f9f9f9;
+    background-color: var(--color-bg);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -190,19 +242,20 @@ nav ul li a:hover {
 
 .precio-item .precio {
     font-size: 2em;
-    color: #1abc9c;
+    color: var(--color-primary);
     font-weight: 600;
     margin-bottom: 10px;
 }
 
-/* Rafting Section */
-.rafting {
-    background: url('images/rafting.jpg') no-repeat center center/cover;
+/* Rafting, Quincho, Paintball Sections */
+.rafting, .quincho, .paintball {
+    background: url('images/rafting2.jpg') no-repeat center center/cover;
     padding: 100px 20px;
     text-align: center;
     color: #fff;
     margin-bottom: 10px;
 }
+
 .quincho {
     background: url('images/quinchos.jpg') no-repeat center center/cover;
     padding: 100px 20px;
@@ -210,6 +263,7 @@ nav ul li a:hover {
     color: #fff;
     margin-bottom: 10px;
 }
+
 .paintball {
     background: url('images/paintball.jpg') no-repeat center center/cover;
     padding: 100px 20px;
@@ -217,35 +271,31 @@ nav ul li a:hover {
     color: #fff;
     margin-bottom: 10px;
 }
-.rafting-content {
-    max-width: 800px;
+
+.rafting-content, .quincho-content, .paintball-content {
+    max-width: 600px;
     margin: 0 auto;
+    background: rgba(58, 58, 58, 0.8); /* Fondo más oscuro para mayor contraste */
+    padding: 20px;
+    border-radius: 10px;
 }
 
-.rafting h2 {
+.rafting h2, .quincho h2, .paintball h2 {
     font-size: 3em;
     margin-bottom: 20px;
-}
-.paintball h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
-}
-.quincho h2 {
-    font-size: 3em;
-    margin-bottom: 20px;
+    color: #fff; /* Texto blanco para mayor contraste */
 }
 
-.rafting p {
+.rafting p, .quincho p, .paintball p {
     font-size: 1.2em;
     margin-bottom: 40px;
+    color: #fff; /* Texto blanco para mayor contraste */
 }
-.quincho p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-}
-.paintball p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
+
+.botones-actividad {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Espacio entre los botones */
 }
 
 /* Ubicación Section */
@@ -272,7 +322,7 @@ nav ul li a:hover {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #25d366;
+    background-color: var(--color-secondary);
     color: #fff;
     width: 60px;
     height: 60px;
@@ -315,46 +365,52 @@ footer {
 }
 
 .social-icons a:hover {
-    color: #1abc9c;
+    color: var(--color-primary);
 }
 
-/* Estilos para la página de instalación detallada */
-.instalacion-detalle {
+/* Página "Piscina-Kayak" */
+.imagen-texto {
+    display: flex;
+    align-items: center;
+    gap: 40px;
     padding: 80px 20px;
-    text-align: center;
-}
-
-.instalacion-content {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.imagen-texto {
-    display: flex;
-    align-items: center;
-    gap: 40px; /* Espacio entre la imagen y el texto */
+.imagen-texto .imagen {
+    width: 50%;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
-.imagen-texto img {
-    width: 40%; /* Reducimos el ancho de la imagen */
-    border-radius: 10px;
-    max-height: 550px; /* Limitamos la altura máxima */
-    object-fit: cover; /* Asegura que la imagen mantenga su proporción */
+.imagen-texto .imagen img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.imagen-texto .imagen img:hover {
+    transform: scale(1.05);
 }
 
 .imagen-texto .texto {
-    width: 60%; /* El texto ocupa más espacio */
+    width: 50%;
     text-align: left;
 }
 
 .imagen-texto h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
+    color: var(--color-text);
 }
 
 .imagen-texto p {
     font-size: 1.2em;
     margin-bottom: 20px;
+    color: #555;
 }
 
 .imagen-texto ul {
@@ -372,7 +428,7 @@ footer {
 
 .imagen-texto ul li::before {
     content: "•";
-    color: #1abc9c;
+    color: var(--color-primary);
     font-size: 1.5em;
     position: absolute;
     left: 0;
@@ -380,7 +436,7 @@ footer {
 }
 
 .imagen-texto .btn-primary {
-    background-color: #1abc9c;
+    background-color: var(--color-primary);
     color: #fff;
     padding: 15px 30px;
     border-radius: 5px;
@@ -394,16 +450,307 @@ footer {
 
 /* Responsive para móviles */
 @media (max-width: 768px) {
+    /* Mostrar el botón de hamburguesa en móviles */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Ocultar el menú de navegación en móviles */
+    nav {
+        display: none;
+        position: absolute;
+        top: 70px; /* Ajusta según la altura del header */
+        left: 0;
+        right: 0;
+        background-color: #2c3e50;
+        padding: 10px 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+
+    /* Mostrar el menú cuando está activo */
+    nav.active {
+        display: block;
+    }
+
+    /* Ajustar el botón "Contáctanos" en móviles */
+    .btn-contacto {
+        display: block; /* Hacer que el botón ocupe toda la línea */
+        width: 100%; /* Asegurarse de que el botón tenga un ancho completo */
+        margin: 10px 0; /* Espacio adicional alrededor del botón */
+        padding: 15px; /* Aumentar el padding para facilitar el toque */
+        box-sizing: border-box; /* Incluir el padding en el cálculo del ancho */
+    }
+
+    /* Ajustar los botones en móviles */
+    .botones-actividad {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Diseño responsivo para la página "Piscina-Kayak" */
     .imagen-texto {
         flex-direction: column;
     }
 
-    .imagen-texto img,
+    .imagen-texto .imagen,
     .imagen-texto .texto {
         width: 100%;
     }
 
-    .imagen-texto img {
-        max-height: 300px; /* Ajustamos la altura para móviles */
+    .imagen-texto .imagen img {
+        max-height: 300px;
     }
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/hero2.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff; /* Texto blanco brillante */
+    position: relative;
+}
+
+/* Ajustar el brillo y contraste de la imagen de fondo */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Filtro oscuro ligero para mejorar el contraste */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Coloca el contenido encima del filtro */
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 4em;
+    margin-bottom: 20px;
+    color: #fff; /* Texto blanco brillante */
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /* Sombra fuerte para destacar sobre la imagen */
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: #fff; /* Texto blanco brillante */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8); /* Sombra suave para mejorar la legibilidad */
+}
+
+
+
+.btn-primary:hover {
+    background-color: #16a085;
+}
+/* Ajustes generales para todas las secciones */
+.instalaciones,
+.precios,
+.rafting,
+.quincho,
+.paintball,
+.ubicacion {
+    padding: 20px 15px; /* Reducimos el padding superior e inferior */
+    margin-bottom: 10px; /* Espacio mínimo entre secciones */
+}
+
+/* Ajustes específicos para la sección Hero */
+.hero {
+    padding: 30px 15px; /* Reducimos el padding del hero */
+    margin-bottom: 10px; /* Espacio mínimo después del hero */
+}
+
+/* Ajustes para las secciones de Actividades (Rafting, Quincho, Paintball) */
+.rafting,
+.quincho,
+.paintball {
+    padding: 20px 15px; /* Reducimos el padding */
+    margin-bottom: 10px; /* Espacio mínimo entre actividades */
+}
+
+/* Ajustes para la sección de Ubicación */
+.ubicacion {
+    padding: 20px 15px; /* Reducimos el padding */
+    margin-bottom: 0; /* No necesitamos margen inferior en la última sección */
+}
+
+/* Asegurarse de que no haya márgenes adicionales en los elementos internos */
+h2, p {
+    margin-top: 0; /* Eliminar cualquier margen superior innecesario */
+    margin-bottom: 10px; /* Reducir el margen inferior */
+}
+
+/* Ajustes para los botones dentro de las secciones */
+.btn-primary, .btn-secondary {
+    margin-top: 10px; /* Reducir el espacio entre el texto y los botones */
+}
+/* Estilos para la sección de Actividades */
+.actividades {
+    padding: 40px 20px; /* Espaciado reducido */
+    text-align: center; /* Centrar el contenido */
+    background-color: #f9f9f9; /* Fondo claro */
+}
+
+.actividades h2 {
+    font-size: 2.5em; /* Tamaño grande para el título principal */
+    margin-bottom: 40px; /* Espacio debajo del título */
+    color: #333; /* Color oscuro para contraste */
+    position: relative; /* Para agregar decoraciones adicionales si es necesario */
+}
+
+.actividades h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #1abc9c; /* Línea decorativa debajo del título */
+    margin: 10px auto 0; /* Centrar la línea */
+}
+
+/* Ajustes para las subsecciones (Rafting, Quincho, Paintball) */
+.rafting,
+.quincho,
+.paintball {
+    padding: 60px 20px; /* Reducimos el padding */
+    margin-bottom: 20px; /* Espacio entre actividades */
+    background-size: cover; /* Asegurar que las imágenes de fondo cubran todo */
+    background-position: center; /* Centrar las imágenes de fondo */
+}
+
+.rafting-content,
+.quincho-content,
+.paintball-content {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.7); /* Fondo oscuro para el texto */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.rafting h2,
+.quincho h2,
+.paintball h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff; /* Texto blanco brillante */
+}
+
+.rafting p,
+.quincho p,
+.paintball p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #fff; /* Texto blanco brillante */
+}
+/* Estilos generales para los títulos h2 */
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    position: relative; /* Necesario para la barra decorativa */
+}
+
+/* Barra de subrayado para los títulos h2 */
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #1abc9c; /* Color de la barra */
+    margin: 10px auto 0; /* Centrar la barra */
+}
+
+/* Eliminar la barra de subrayado para Quincho, Rafting y Paintball */
+.rafting h2::after,
+.quincho h2::after,
+.paintball h2::after {
+    display: none; /* Ocultar la barra para estas secciones */
+}
+
+/* Ajustes específicos para las secciones */
+.instalaciones h2,
+.precios h2,
+.ubicacion h2 {
+    text-align: center; /* Centrar los títulos */
+}
+
+/* Ajustes para las actividades (Quincho, Rafting, Paintball) */
+.rafting h2,
+.quincho h2,
+.paintball h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #fff; /* Texto blanco brillante */
+    text-align: center; /* Centrar los títulos */
+}
+/* Estilos para la sección de Galería */
+.galeria {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.galeria h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.galeria h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #1abc9c;
+    margin: 10px auto 0;
+}
+
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.galeria-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 300px; /* Altura fija para mantener consistencia */
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s;
+}
+
+.galeria-item:hover img {
+    transform: scale(1.05); /* Efecto de zoom suave */
 }
